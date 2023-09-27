@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* header */
+header {
+    background-color: #FA5;
+}
+
+.header-container {
+    width: 1280px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+/* header left part */
+.header-container__left {
+    display: flex;
+    align-items: center;
+}
+
+.fa-camera-retro {
+    font-size: 2em;
+    margin-right: 0.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+/* header right part */
+.header-container__right {
+    position: relative;
+    width: 20em;
+    
+}
+
+.input {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 1em;
+    border: 1px solid #DDDDDD;
+    border-radius: 0.3em;
+    padding: 0.7em 1.2em;
+   /*transition: all 0.30s ease-in-out; */
+}
+
+.fa-magnifying-glass {
+    position: absolute;
+    cursor: pointer;
+    font-size: 1.5em;
+    top: 25%;
+    right: 5%;
+    transition: 1s;
+}
+
+/* main section of gallery */
+.main-container {
+    width: 1280px;
+    margin: auto;
+}
+
+.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 230px auto;
+    justify-items: center;
+    row-gap: 1em;
+}
+
+/* footer */
+.footer {
+    width: 100%;
+    background-color: #FA5;
+    /*position: fixed;*/
+    bottom: 0;
+}
+
+.footer-container {
+    width: 1280px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.github, .school {
+    padding: 1em;
+}
+
+.date {
+    font-size: 2em;
+}
