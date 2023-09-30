@@ -30,11 +30,9 @@ function fetchAndDisplayImages(apiUrl) {
     });
 }
 
-
-
 // Выполнение поиска
 function searchImages(query) {
-  const searchApiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=10&query=${query}`;
+  const searchApiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=30&query=${query}`;
   fetchAndDisplayImages(searchApiUrl);
 }
 
@@ -50,10 +48,11 @@ input.addEventListener('keyup', (event) => {
 
 // Нажатие лупы
 searchIcon.addEventListener('click', () => {
-  const query = input.value.trim();
-  if (query !== '') {
-    searchImages(query);
-  }
+    const query = input.value.trim();
+    if (query !== '') {
+        searchIcon.classList.add('clicked');
+        searchImages(query);
+    }
 });
 
 // Очистка поля ввода
@@ -62,8 +61,9 @@ function clearInput() {
     clearButton.style.display = 'none';
     input.setAttribute('placeholder', 'Search...');
     input.focus();
+    searchIcon.classList.remove('clicked');
 }
-
+ 
 input.addEventListener('input', () => {
     if (input.value.trim() !== '') {
         clearButton.style.display = 'block';
@@ -74,6 +74,5 @@ input.addEventListener('input', () => {
     }
 });
 
-  
 fetchAndDisplayImages(apiUrl);
 clearButton.addEventListener('click', clearInput);

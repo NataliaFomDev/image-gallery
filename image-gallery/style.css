@@ -35,7 +35,6 @@ h2 {
 .header-container__right {
     position: relative;
     width: 20em;
-    
 }
 
 .input {
@@ -51,9 +50,23 @@ h2 {
     position: absolute;
     cursor: pointer;
     font-size: 1.5em;
-    top: 25%;
+    top: 20%;
     right: 5%;
     transition: 1s;
+}
+
+.clear-button {
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    font-size: 1.5em;
+    top: 22%;
+    right: 15%;
+    transition: 1s;
+}
+
+.clear-button:focus {
+    outline: none;
 }
 
 /* main section of gallery */
@@ -76,7 +89,12 @@ h2 {
     height: 280px;
     object-fit: cover;
     cursor: pointer;
+    transition: transform 0.3s ease;
   }
+
+  .grid img:hover {
+    transform: scale(1.1);
+}
 
 /* footer */
 .footer {
